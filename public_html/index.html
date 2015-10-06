@@ -1,0 +1,38 @@
+<!DOCTYPE html "-//W3C//DTD XHTML 1.0 Strict//EN" 
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <title>Google Maps API サンプル</title>
+        
+        <!-- GoogleMap API Key Define -->
+        <script type="text/javascript"
+            src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBbWKOty8pSwyeBlXg2HlkktmAfKYb8zxw
+                    &sensor=false
+                    &language=ja">
+        </script>
+        
+        <script type="text/javascript" src="js/sample.js">   
+        </script>
+
+    </head>
+    <body onload="initialize()">
+        <p>自宅の地図です。</p>
+    
+        <div id="map_canvas" style="width:500px; height:300px"></div>
+        
+        <form>
+            <p>
+                <input type="button" id="tokyo" value="東京" onclick="setTokyo()" />
+                <input type="button" id="shimbashi" value="新橋" onclick="toShimbashi()" />
+                <input type="button" id="osaka" value="大阪" onclick="setOsaka()" />
+                <input type="button" id="left" value="左" onclick="toLeftBottom()" />
+                <input type="button" id="right" value="右" onclick="toRightTop()" />
+                <input type="button" id="m1" value="マーカー1" onclick="setMarker1()" />
+                <input type="button" id="m2" value="マーカー2" onclick="setMarker2()" />
+            </p>
+        </form>
+        
+        <p id="latlng" style=font-size:10px;"></p>
+    </body>
+</html>
